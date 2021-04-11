@@ -1,0 +1,5 @@
+Import('*')
+
+SimObject('MjzObject.py')
+Source('mjz_object.cc')
+

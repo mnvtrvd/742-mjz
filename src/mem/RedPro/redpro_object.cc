@@ -1,6 +1,5 @@
 #include "mem/mjz/mjz_object.hh"
 #include "debug/MjzDebug.hh"
-#include <iostream>
 
 MjzObject::MjzObject(MjzObjectParams *params) :
     SimObject(params)

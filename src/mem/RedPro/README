@@ -1,0 +1,22 @@
+------------------
+gem5 instructions
+------------------
+
+1. (Re-)build gem5: 
+
+cd /srv/742/742-mjz/
+scons -j4 build/RISCV/gem5.opt
+(maybe) scons -j4 build/X86/gem5.opt
+
+[ Note: this will take a while ]
+
+2. Run the system
+
+build/RISCV/gem5.opt configs/RedPro/redpro_config.py
+
+3. Location of our custom files:
+    - objects: src/mem/RedPro/
+        - where you implement the system
+    - config scripts: configs/RedPro/redpro_config.py
+
+

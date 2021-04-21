@@ -8,7 +8,7 @@ system.clk_domain.clock = '1GHz'
 system.clk_domain.voltage_domain = VoltageDomain()
 
 system.mem_mode = 'timing'
-system.mem_ranges = [AddrRange('512MB')]
+system.mem_ranges = [AddrRange('1024MB')]
 
 system.cpu = TimingSimpleCPU()
 system.membus = SystemXBar()
@@ -23,8 +23,9 @@ system.cpu.interrupts[0].int_slave = system.membus.master
 
 system.system_port = system.membus.slave
 
-system.mem_ctrl = DDR4_1600_8x8()
-system.mem_ctrl.range = system.mem_ranges[0]
+system.mem_ctrl = MemCtrl()
+system.mem_ctrl.dram = DDR3_1600_8x8()
+system.mem_ctrl.dram.range = system.mem_ranges[0]
 system.mem_ctrl.port = system.membus.master
 
 process = Process()

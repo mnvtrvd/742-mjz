@@ -1,11 +1,12 @@
 #include "mem/mjz/mjz_object.hh"
-
+#include "debug/MjzDebug.hh"
 #include <iostream>
 
 MjzObject::MjzObject(MjzObjectParams *params) :
     SimObject(params)
 {
-    std::cout << "Hello World! From a SimObject!" << std::endl;
+    // std::cout << "Hello World! From a SimObject!" << std::endl;
+    DPRINTF(MjzDebug, "See this debug output with --debug-flags=MjzDebug")
 }
 
 MjzObject*

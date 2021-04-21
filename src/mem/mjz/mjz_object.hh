@@ -1,7 +1,7 @@
 #ifndef __MJZ_OBJECT_HH__
 #define __MJZ_OBJECT_HH__
 
-#include "params/HelloObject.hh"
+#include "params/MjzObject.hh"
 #include "sim/sim_object.hh"
 
 class MjzObject : public SimObject
